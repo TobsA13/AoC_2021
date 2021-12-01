@@ -1,15 +1,8 @@
-print("Enter/Paste your content. Ctrl-D to save it.")
-print()
-contents = []
-while True:
-    try:
-        line = input("")
-    except EOFError:
-        break
-    if line.strip():
-        contents.append(line)
+# Strip elements of list
+lines = map(lambda x: x.strip(), lines)
 
+# Remove empty strings in list
+lines = filter(lambda x: x != '', lines)
 
-
-f = open("file", "r")
-data = f.readlines()
+# Convert every element in list to int
+lines = list(map(lambda x: int(x), lines))
