@@ -16,6 +16,9 @@ class aoc:
     def floats(self, s: List[str]):
         return list(map(float, s))
 
+    def strips(self, s: List[str]):
+        return list(map(str.strip, s))
+
     # --- Input -------------------------------------------------------------------
 
     def resolve_day(self):
@@ -25,9 +28,9 @@ class aoc:
         with open(self.resolve_day()) as file:
             return file.read()
 
-    def read_lines(self):
+    def read_lines(self, strip = True):
         with open(self.resolve_day()) as file:
-            return list(file)
+            return self.strips(list(file)) if strip else list(file)
 
     def read_lines_int(self):
         return self.ints(self.read_lines())
