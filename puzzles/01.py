@@ -3,7 +3,7 @@ from pprint import pprint
 print("AoC 2021-01")
 print()
 
-f = open("01data", "r")
+f = open("../inputs/01data", "r")
 data = f.readlines()
 
 #------------- Part 1

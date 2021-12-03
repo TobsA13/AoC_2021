@@ -2,10 +2,11 @@ from pathlib import Path
 from typing import List
 
 
+
 class aoc:
-    def __init__(self, day: int, suffix: str = ""):
+    def __init__(self, day: int, example: bool=False):
         self.day = day
-        self.suffix = suffix
+        self.example = example
         print("Advent of Code 2021 Day {day}.\n\n".format(day=day))
 
     # --- Parsing -----------------------------------------------------------------
@@ -22,7 +23,7 @@ class aoc:
     # --- Input -------------------------------------------------------------------
 
     def resolve_day(self):
-        return Path("inputs/" + str(self.day) + self.suffix)
+        return Path("inputs/" + str(self.day) + ("e" if self.example else ""))
 
     def read_string(self):
         with open(self.resolve_day()) as file:
