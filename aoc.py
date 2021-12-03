@@ -1,4 +1,6 @@
 from pathlib import Path
+from typing import List
+
 
 class aoc:
     def __init__(self, day: int, suffix: str = ""):
@@ -8,10 +10,10 @@ class aoc:
 
     # --- Parsing -----------------------------------------------------------------
 
-    def ints(self, s: list[str]):
+    def ints(self, s: List[str]):
         return list(map(int, s))
 
-    def floats(self, s: list[str]):
+    def floats(self, s: List[str]):
         return list(map(float, s))
 
     # --- Input -------------------------------------------------------------------
